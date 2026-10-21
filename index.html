@@ -62,7 +62,7 @@
         .badge { background-color: var(--gold-accent); color: #ffffff; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
 
         .card-img-box {
-            width: 100%; height: 230px; background-color: #ffffff;
+            width: 100%; height: 220px; background-color: #ffffff;
             display: flex; align-items: center; justify-content: center; padding: 10px;
         }
         .card-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -108,10 +108,38 @@
         const waNumber = "5584997017888";
 
         const produtos = [
+            // --- REALME ---
             {
                 categoria: "Realme",
-                nome: "Realme C100x NFC",
-                specs: ["128GB / 256GB • 4GB RAM", "Câmera 50MP com IA", "NFC Integrado • Design Fluido"],
+                nome: "Realme Note 60X 64GB",
+                specs: ["64GB Armazenamento", "RAM Expansível", "Bateria 5000mAh"],
+                precoPix: "R$ 770,00",
+                precoCard: "12x R$ 72,50",
+                selo: "Oferta",
+                img: "Realme Note 60x.jpeg"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme Note 60X 128GB",
+                specs: ["128GB Armazenamento", "RAM Expansível", "Bateria 5000mAh"],
+                precoPix: "R$ 870,00",
+                precoCard: "12x R$ 81,92",
+                selo: "Mais Vendido",
+                img: "Realme Note 60x.jpeg"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C100x NFC 128GB",
+                specs: ["128GB Armazenamento", "4GB RAM", "Câmera 50MP com IA", "NFC Integrado"],
+                precoPix: "R$ 1.150,00",
+                precoCard: "12x R$ 108,29",
+                selo: "NFC",
+                img: "Realme C100x NFC.jpeg"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C100x NFC 256GB",
+                specs: ["256GB Armazenamento", "4GB RAM", "Câmera 50MP com IA", "NFC Integrado"],
                 precoPix: "R$ 1.250,00",
                 precoCard: "12x R$ 117,71",
                 selo: "NFC",
@@ -119,26 +147,8 @@
             },
             {
                 categoria: "Realme",
-                nome: "Realme C85 Pro NFC",
-                specs: ["256GB • 8GB RAM", "Câmera Dupla 50MP", "Carregamento Rápido • NFC"],
-                precoPix: "R$ 1.550,00",
-                precoCard: "12x R$ 145,96",
-                selo: "Pro NFC",
-                img: "Realme C85 Pro.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme Note 70",
-                specs: ["256GB • 8GB RAM", "Ecrã Fluido de 90Hz", "Bateria de Longa Duração"],
-                precoPix: "R$ 1.040,00",
-                precoCard: "12x R$ 97,93",
-                selo: "Destaque",
-                img: "Realme Note 70.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C75 NFC",
-                specs: ["128GB / 256GB • 8GB RAM", "Câmera Principal 50MP", "Construção Ultra Resistente • NFC"],
+                nome: "Realme C75 NFC 128GB",
+                specs: ["128GB Armazenamento", "8GB RAM", "Câmera Principal 50MP", "Ultra Resistente"],
                 precoPix: "R$ 1.150,00",
                 precoCard: "12x R$ 108,29",
                 selo: "NFC",
@@ -146,17 +156,35 @@
             },
             {
                 categoria: "Realme",
-                nome: "Realme Note 60x",
-                specs: ["64GB / 128GB • RAM Expansível", "Bateria de 5000mAh", "Excelente Custo-Benefício"],
-                precoPix: "R$ 870,00",
-                precoCard: "12x R$ 81,92",
-                selo: "Oferta",
-                img: "Realme Note 60x.jpeg"
+                nome: "Realme C75 NFC 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera Principal 50MP", "Ultra Resistente"],
+                precoPix: "R$ 1.280,00",
+                precoCard: "12x R$ 120,53",
+                selo: "NFC",
+                img: "Realme C75.jpeg"
             },
             {
                 categoria: "Realme",
-                nome: "Realme P4 Lite NFC",
-                specs: ["128GB • 4GB RAM", "Design Leve e Moderno", "Conectividade NFC"],
+                nome: "Realme C85 Pro NFC 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera Dupla 50MP", "Carregamento Rápido"],
+                precoPix: "R$ 1.550,00",
+                precoCard: "12x R$ 145,96",
+                selo: "Pro NFC",
+                img: "Realme C85 Pro.jpeg"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme Note 70 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Tela 90Hz", "Bateria de Longa Duração"],
+                precoPix: "R$ 1.040,00",
+                precoCard: "12x R$ 97,93",
+                selo: "Destaque",
+                img: "Realme Note 70.jpeg"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme P4 Lite NFC 128GB",
+                specs: ["128GB Armazenamento", "4GB RAM", "Design Leve", "NFC Integrado"],
                 precoPix: "R$ 980,00",
                 precoCard: "12x R$ 92,28",
                 selo: "NFC",
@@ -164,8 +192,8 @@
             },
             {
                 categoria: "Realme",
-                nome: "Realme C71",
-                specs: ["128GB • 4GB RAM", "Câmera HD", "Bateria de Longa Duração"],
+                nome: "Realme C71 128GB",
+                specs: ["128GB Armazenamento", "4GB RAM", "Câmera HD", "Bateria 5000mAh"],
                 precoPix: "R$ 1.030,00",
                 precoCard: "12x R$ 97,00",
                 selo: "",
@@ -173,12 +201,153 @@
             },
             {
                 categoria: "Realme",
-                nome: "Realme C85",
-                specs: ["256GB • 8GB RAM", "Desempenho Rápido", "Tela Grande HD+"],
+                nome: "Realme C85 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Tela Grande HD+", "Desempenho Fluido"],
                 precoPix: "R$ 1.450,00",
                 precoCard: "12x R$ 136,54",
                 selo: "Popular",
                 img: "Realme C85.jpeg"
+            },
+
+            // --- REDMI / XIAOMI ---
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi A3 64GB",
+                specs: ["64GB Armazenamento", "3GB RAM", "Tela 6.71\" 90Hz"],
+                precoPix: "R$ 680,00",
+                precoCard: "12x R$ 64,03",
+                selo: "Entrada",
+                img: "https://via.placeholder.com/300?text=Redmi+A3"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi A3 128GB",
+                specs: ["128GB Armazenamento", "4GB RAM", "Tela 6.71\" 90Hz"],
+                precoPix: "R$ 750,00",
+                precoCard: "12x R$ 70,62",
+                selo: "Custo-Benefício",
+                img: "https://via.placeholder.com/300?text=Redmi+A3"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi 14C 128GB",
+                specs: ["128GB Armazenamento", "4GB RAM", "Câmera 50MP"],
+                precoPix: "R$ 890,00",
+                precoCard: "12x R$ 83,81",
+                selo: "",
+                img: "https://via.placeholder.com/300?text=Redmi+14C"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi 14C 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 50MP"],
+                precoPix: "R$ 1.050,00",
+                precoCard: "12x R$ 98,87",
+                selo: "Lançamento",
+                img: "https://via.placeholder.com/300?text=Redmi+14C"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi 13 128GB",
+                specs: ["128GB Armazenamento", "6GB RAM", "Câmera 108MP"],
+                precoPix: "R$ 1.020,00",
+                precoCard: "12x R$ 96,05",
+                selo: "",
+                img: "https://via.placeholder.com/300?text=Redmi+13"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi 13 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 108MP"],
+                precoPix: "R$ 1.180,00",
+                precoCard: "12x R$ 111,11",
+                selo: "Top Vendas",
+                img: "https://via.placeholder.com/300?text=Redmi+13"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi Note 13 4G 128GB",
+                specs: ["128GB Armazenamento", "6GB RAM", "Tela AMOLED 120Hz", "Câmera 108MP"],
+                precoPix: "R$ 1.190,00",
+                precoCard: "12x R$ 112,05",
+                selo: "AMOLED",
+                img: "https://via.placeholder.com/300?text=Redmi+Note+13"
+            },
+            {
+                categoria: "Redmi / Xiaomi",
+                nome: "Redmi Note 13 4G 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Tela AMOLED 120Hz", "Câmera 108MP"],
+                precoPix: "R$ 1.340,00",
+                precoCard: "12x R$ 126,18",
+                selo: "AMOLED",
+                img: "https://via.placeholder.com/300?text=Redmi+Note+13"
+            },
+
+            // --- POCO ---
+            {
+                categoria: "POCO",
+                nome: "Poco C65 128GB",
+                specs: ["128GB Armazenamento", "6GB RAM", "Câmera 50MP"],
+                precoPix: "R$ 880,00",
+                precoCard: "12x R$ 82,86",
+                selo: "",
+                img: "https://via.placeholder.com/300?text=Poco+C65"
+            },
+            {
+                categoria: "POCO",
+                nome: "Poco C65 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 50MP"],
+                precoPix: "R$ 1.020,00",
+                precoCard: "12x R$ 96,05",
+                selo: "Pop",
+                img: "https://via.placeholder.com/300?text=Poco+C65"
+            },
+            {
+                categoria: "POCO",
+                nome: "Poco M6 Pro 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Tela AMOLED 120Hz", "Câmera 64MP OIS"],
+                precoPix: "R$ 1.390,00",
+                precoCard: "12x R$ 130,89",
+                selo: "Pro",
+                img: "https://via.placeholder.com/300?text=Poco+M6+Pro"
+            },
+            {
+                categoria: "POCO",
+                nome: "Poco X6 Pro 5G 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Processador Dimensity 8300-Ultra", "5G"],
+                precoPix: "R$ 2.190,00",
+                precoCard: "12x R$ 206,21",
+                selo: "Gamer",
+                img: "https://via.placeholder.com/300?text=Poco+X6+Pro"
+            },
+            {
+                categoria: "POCO",
+                nome: "Poco X6 Pro 5G 512GB",
+                specs: ["512GB Armazenamento", "12GB RAM", "Processador Dimensity 8300-Ultra", "5G"],
+                precoPix: "R$ 2.490,00",
+                precoCard: "12x R$ 234,46",
+                selo: "Power",
+                img: "https://via.placeholder.com/300?text=Poco+X6+Pro"
+            },
+
+            // --- TECNO ---
+            {
+                categoria: "Tecno",
+                nome: "Tecno Spark Go 2024 64GB",
+                specs: ["64GB Armazenamento", "3GB RAM", "Som Estéreo Dual Speakers"],
+                precoPix: "R$ 650,00",
+                precoCard: "12x R$ 61,20",
+                selo: "Econômico",
+                img: "https://via.placeholder.com/300?text=Tecno+Spark+Go"
+            },
+            {
+                categoria: "Tecno",
+                nome: "Tecno Spark 20 Pro 256GB",
+                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 108MP", "Carregamento 33W"],
+                precoPix: "R$ 1.120,00",
+                precoCard: "12x R$ 105,46",
+                selo: "Destaque",
+                img: "https://via.placeholder.com/300?text=Tecno+Spark+20"
             }
         ];
 
@@ -204,7 +373,7 @@
                         ${prod.selo ? `<span class="badge">${prod.selo}</span>` : ''}
                     </div>
                     <div class="card-img-box">
-                        <img src="${encodeURIComponent(prod.img)}" alt="${prod.nome}" loading="lazy">
+                        <img src="${encodeURIComponent(prod.img)}" alt="${prod.nome}" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Sem+Foto'">
                     </div>
                     <div class="card-content">
                         <span class="brand-label">${prod.categoria}</span>

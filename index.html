@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Maiara Cell - Catálogo Oficial</title>
+    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,11 +15,21 @@
             --gold-accent: #c5a059;
             --whatsapp-green: #25d366;
             --text-main: #2d2d2d;
-            --text-muted: #666666;
+            --text-muted: #777777;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); padding-bottom: 40px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding-bottom: 40px;
+        }
 
         header {
             background-color: #111111;
@@ -33,59 +44,217 @@
             z-index: 100;
         }
 
-        .brand-info h1 { font-size: 20px; font-weight: 700; color: #fdfdfd; }
-        .brand-info p { font-size: 12px; color: var(--gold-accent); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-
-        .header-icons { display: flex; gap: 12px; }
-        .header-icons a {
-            width: 40px; height: 40px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; color: #ffffff;
-            font-size: 20px; text-decoration: none;
+        .brand-info h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #fdfdfd;
         }
+
+        .brand-info p {
+            font-size: 12px;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .header-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
         .ico-wa { background-color: var(--whatsapp-green); }
         .ico-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 12px; }
-        .category-title { font-size: 18px; font-weight: 700; margin: 25px 0 15px 5px; color: var(--primary-dark); border-left: 4px solid var(--gold-accent); padding-left: 8px; }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 12px;
+        }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .category-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 25px 0 15px 5px;
+            color: var(--primary-dark);
+            border-left: 4px solid var(--gold-accent);
+            padding-left: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+        }
 
         .card {
             background-color: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            display: flex; flex-direction: column; position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.2s ease;
         }
 
-        .badge-container { position: absolute; top: 10px; left: 10px; z-index: 2; }
-        .badge { background-color: var(--gold-accent); color: #ffffff; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .badge-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 2;
+        }
+
+        .badge {
+            background-color: var(--gold-accent);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-garantia {
+            background-color: #333333;
+        }
 
         .card-img-box {
-            width: 100%; height: 220px; background-color: #ffffff;
-            display: flex; align-items: center; justify-content: center; padding: 10px;
+            width: 100%;
+            height: 200px;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            position: relative;
         }
-        .card-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .card-content { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
-        .brand-label { font-size: 11px; font-weight: 600; color: var(--gold-accent); text-transform: uppercase; margin-bottom: 2px; }
-        .product-name { font-size: 16px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
+        .card-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
 
-        .specs-list { list-style: none; margin-bottom: 12px; font-size: 12px; color: var(--text-muted); }
-        .specs-list li { margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-        .specs-list li i { color: var(--gold-accent); font-size: 11px; }
+        .card-content {
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
 
-        .price-section { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 10px; border-top: 1px solid #eeeeee; }
-        .price-pix-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
-        .price-pix-value { font-size: 20px; font-weight: 700; color: var(--primary-dark); }
-        .price-card-value { font-size: 11px; color: var(--text-muted); text-align: right; }
+        .brand-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
 
-        .card-footer { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background-color: #fafafa; border-top: 1px solid #f0f0f0; }
-        .whatsapp-btn-full {
-            width: 100%; background-color: var(--whatsapp-green); color: white;
-            padding: 10px; border-radius: 6px; display: flex; align-items: center;
-            justify-content: center; gap: 8px; font-weight: 700; font-size: 13px;
-            text-decoration: none; box-shadow: 0 2px 5px rgba(37, 211, 102, 0.2);
+        .product-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .product-specs {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #eeeeee;
+            margin-bottom: 12px;
+        }
+
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: auto;
+        }
+
+        .price-pix-label {
+            font-size: 9px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .price-pix-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .price-card-value {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background-color: #fafafa;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .details-link {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .whatsapp-btn {
+            width: 36px;
+            height: 36px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(37, 211, 102, 0.3);
+            transition: transform 0.1s;
+        }
+
+        .whatsapp-btn:active {
+            transform: scale(0.92);
         }
     </style>
 </head>
@@ -97,261 +266,480 @@
             <p>Catálogo Oficial • Pronta Entrega</p>
         </div>
         <div class="header-icons">
-            <a href="https://wa.me/5584997017888?text=Olá,%20vim%20pelo%20catálogo%20e%20gostaria%20de%20tirar%20duvidas!" class="ico-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/5584999999999?text=Olá,%20vim%20pelo%20catálogo%20e%20gostaria%20de%20tirar%20duvidas!" class="ico-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://instagram.com/maiara_cel" class="ico-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </header>
 
-    <div class="container" id="catalogo-container"></div>
+    <div class="container" id="catalogo-container">
+        <!-- Os produtos são injetados dinamicamente via script -->
+    </div>
 
     <script>
-        const waNumber = "5584997017888";
-
+        // Dados extraídos da tabela oficial Black Maiara Cell
         const produtos = [
-            // --- REALME ---
+            // REALME
             {
                 categoria: "Realme",
-                nome: "Realme Note 60X 64GB",
-                specs: ["64GB Armazenamento", "RAM Expansível", "Bateria 5000mAh"],
-                precoPix: "R$ 770,00",
-                precoCard: "12x R$ 72,50",
-                selo: "Oferta",
-                img: "Realme Note 60x.jpeg"
+                nome: "Realme Note 60X",
+                specs: "64GB / 3GB RAM",
+                precoPix: "R$ 800,00",
+                precoCard: "12x R$ 75,33",
+                selo: "Garantia Fabricante",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
             },
             {
                 categoria: "Realme",
-                nome: "Realme Note 60X 128GB",
-                specs: ["128GB Armazenamento", "RAM Expansível", "Bateria 5000mAh"],
+                nome: "Realme Note 60X",
+                specs: "128GB / 4GB RAM",
                 precoPix: "R$ 870,00",
                 precoCard: "12x R$ 81,92",
-                selo: "Mais Vendido",
-                img: "Realme Note 60x.jpeg"
+                selo: "Oportunidade",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
             },
             {
                 categoria: "Realme",
-                nome: "Realme C100x NFC 128GB",
-                specs: ["128GB Armazenamento", "4GB RAM", "Câmera 50MP com IA", "NFC Integrado"],
-                precoPix: "R$ 1.150,00",
-                precoCard: "12x R$ 108,29",
-                selo: "NFC",
-                img: "Realme C100x NFC.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C100x NFC 256GB",
-                specs: ["256GB Armazenamento", "4GB RAM", "Câmera 50MP com IA", "NFC Integrado"],
-                precoPix: "R$ 1.250,00",
-                precoCard: "12x R$ 117,71",
-                selo: "NFC",
-                img: "Realme C100x NFC.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C75 NFC 128GB",
-                specs: ["128GB Armazenamento", "8GB RAM", "Câmera Principal 50MP", "Ultra Resistente"],
-                precoPix: "R$ 1.150,00",
-                precoCard: "12x R$ 108,29",
-                selo: "NFC",
-                img: "Realme C75.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C75 NFC 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera Principal 50MP", "Ultra Resistente"],
-                precoPix: "R$ 1.280,00",
-                precoCard: "12x R$ 120,53",
-                selo: "NFC",
-                img: "Realme C75.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C85 Pro NFC 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera Dupla 50MP", "Carregamento Rápido"],
-                precoPix: "R$ 1.550,00",
-                precoCard: "12x R$ 145,96",
-                selo: "Pro NFC",
-                img: "Realme C85 Pro.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme Note 70 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Tela 90Hz", "Bateria de Longa Duração"],
+                nome: "Realme Note 70",
+                specs: "256GB / 8GB RAM",
                 precoPix: "R$ 1.040,00",
                 precoCard: "12x R$ 97,93",
                 selo: "Destaque",
-                img: "Realme Note 70.jpeg"
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
             },
             {
                 categoria: "Realme",
-                nome: "Realme P4 Lite NFC 128GB",
-                specs: ["128GB Armazenamento", "4GB RAM", "Design Leve", "NFC Integrado"],
-                precoPix: "R$ 980,00",
-                precoCard: "12x R$ 92,28",
-                selo: "NFC",
-                img: "Realme P4 Lite NFC.jpeg"
-            },
-            {
-                categoria: "Realme",
-                nome: "Realme C71 128GB",
-                specs: ["128GB Armazenamento", "4GB RAM", "Câmera HD", "Bateria 5000mAh"],
+                nome: "Realme C71",
+                specs: "128GB / 4GB RAM",
                 precoPix: "R$ 1.030,00",
                 precoCard: "12x R$ 97,00",
                 selo: "",
-                img: "Realme C71.jpeg"
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
             },
             {
                 categoria: "Realme",
-                nome: "Realme C85 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Tela Grande HD+", "Desempenho Fluido"],
+                nome: "Realme C71 NFC 5G",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.320,00",
+                precoCard: "12x R$ 124,30",
+                selo: "5G NFC",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C75 NFC",
+                specs: "128GB / 8GB RAM",
+                precoPix: "R$ 1.150,00",
+                precoCard: "12x R$ 108,29",
+                selo: "NFC",
+                img: "https://images.unsplash.com/photo-1575695342320-d2d2d2f9b73f?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C75 NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.400,00",
+                precoCard: "12x R$ 131,83",
+                selo: "NFC",
+                img: "https://images.unsplash.com/photo-1575695342320-d2d2d2f9b73f?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C85 NFC",
+                specs: "256GB / 8GB RAM",
                 precoPix: "R$ 1.450,00",
                 precoCard: "12x R$ 136,54",
-                selo: "Popular",
-                img: "Realme C85.jpeg"
+                selo: "Mais Vendido",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C85 Pro NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.550,00",
+                precoCard: "12x R$ 145,96",
+                selo: "Pro",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C85 NFC 5G",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.790,00",
+                precoCard: "12x R$ 168,56",
+                selo: "5G",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme P4 Lite NFC",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 980,00",
+                precoCard: "12x R$ 92,28",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C100x NFC",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 1.250,00",
+                precoCard: "12x R$ 117,71",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C100x NFC",
+                specs: "256GB / 4GB RAM",
+                precoPix: "R$ 1.350,00",
+                precoCard: "12x R$ 127,12",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C1001 NFC",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 1.100,00",
+                precoCard: "12x R$ 103,58",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Realme",
+                nome: "Realme C1001 NFC",
+                specs: "256GB / 4GB RAM",
+                precoPix: "R$ 1.350,00",
+                precoCard: "12x R$ 127,12",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
             },
 
-            // --- REDMI / XIAOMI ---
+            // REDMI / XIAOMI
             {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi A3 64GB",
-                specs: ["64GB Armazenamento", "3GB RAM", "Tela 6.71\" 90Hz"],
-                precoPix: "R$ 680,00",
-                precoCard: "12x R$ 64,03",
-                selo: "Entrada",
-                img: "https://via.placeholder.com/300?text=Redmi+A3"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi A3 128GB",
-                specs: ["128GB Armazenamento", "4GB RAM", "Tela 6.71\" 90Hz"],
-                precoPix: "R$ 750,00",
-                precoCard: "12x R$ 70,62",
-                selo: "Custo-Benefício",
-                img: "https://via.placeholder.com/300?text=Redmi+A3"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi 14C 128GB",
-                specs: ["128GB Armazenamento", "4GB RAM", "Câmera 50MP"],
-                precoPix: "R$ 890,00",
-                precoCard: "12x R$ 83,81",
-                selo: "",
-                img: "https://via.placeholder.com/300?text=Redmi+14C"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi 14C 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 50MP"],
-                precoPix: "R$ 1.050,00",
-                precoCard: "12x R$ 98,87",
-                selo: "Lançamento",
-                img: "https://via.placeholder.com/300?text=Redmi+14C"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi 13 128GB",
-                specs: ["128GB Armazenamento", "6GB RAM", "Câmera 108MP"],
-                precoPix: "R$ 1.020,00",
-                precoCard: "12x R$ 96,05",
-                selo: "",
-                img: "https://via.placeholder.com/300?text=Redmi+13"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi 13 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 108MP"],
-                precoPix: "R$ 1.180,00",
-                precoCard: "12x R$ 111,11",
-                selo: "Top Vendas",
-                img: "https://via.placeholder.com/300?text=Redmi+13"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi Note 13 4G 128GB",
-                specs: ["128GB Armazenamento", "6GB RAM", "Tela AMOLED 120Hz", "Câmera 108MP"],
-                precoPix: "R$ 1.190,00",
-                precoCard: "12x R$ 112,05",
-                selo: "AMOLED",
-                img: "https://via.placeholder.com/300?text=Redmi+Note+13"
-            },
-            {
-                categoria: "Redmi / Xiaomi",
-                nome: "Redmi Note 13 4G 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Tela AMOLED 120Hz", "Câmera 108MP"],
-                precoPix: "R$ 1.340,00",
-                precoCard: "12x R$ 126,18",
-                selo: "AMOLED",
-                img: "https://via.placeholder.com/300?text=Redmi+Note+13"
-            },
-
-            // --- POCO ---
-            {
-                categoria: "POCO",
-                nome: "Poco C65 128GB",
-                specs: ["128GB Armazenamento", "6GB RAM", "Câmera 50MP"],
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi A7 Pro",
+                specs: "128GB / 4GB RAM",
                 precoPix: "R$ 880,00",
-                precoCard: "12x R$ 82,86",
+                precoCard: "12x R$ 82,87",
+                selo: "Lançamento",
+                img: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi 15C",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 960,00",
+                precoCard: "12x R$ 90,40",
                 selo: "",
-                img: "https://via.placeholder.com/300?text=Poco+C65"
+                img: "https://images.unsplash.com/photo-1533228876829-65c94e79502a?auto=format&fit=crop&w=500&q=80"
             },
             {
-                categoria: "POCO",
-                nome: "Poco C65 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 50MP"],
-                precoPix: "R$ 1.020,00",
-                precoCard: "12x R$ 96,05",
-                selo: "Pop",
-                img: "https://via.placeholder.com/300?text=Poco+C65"
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi 15C",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.140,00",
+                precoCard: "12x R$ 107,35",
+                selo: "Mais Vendido",
+                img: "https://images.unsplash.com/photo-1533228876829-65c94e79502a?auto=format&fit=crop&w=500&q=80"
             },
             {
-                categoria: "POCO",
-                nome: "Poco M6 Pro 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Tela AMOLED 120Hz", "Câmera 64MP OIS"],
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi 15",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.260,00",
+                precoCard: "12x R$ 118,65",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi 17",
+                specs: "256GB / 6GB RAM",
+                precoPix: "R$ 1.480,00",
+                precoCard: "12x R$ 139,37",
+                selo: "Novidade",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 14S",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.410,00",
+                precoCard: "12x R$ 132,78",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15",
+                specs: "256GB / 8GB RAM (Plug Gr.)",
                 precoPix: "R$ 1.390,00",
                 precoCard: "12x R$ 130,89",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1575695342320-d2d2d2f9b73f?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15 Pro 4G",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.800,00",
+                precoCard: "12x R$ 169,50",
                 selo: "Pro",
-                img: "https://via.placeholder.com/300?text=Poco+M6+Pro"
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
             },
             {
-                categoria: "POCO",
-                nome: "Poco X6 Pro 5G 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Processador Dimensity 8300-Ultra", "5G"],
-                precoPix: "R$ 2.190,00",
-                precoCard: "12x R$ 206,21",
-                selo: "Gamer",
-                img: "https://via.placeholder.com/300?text=Poco+X6+Pro"
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15 Pro NFC 5G",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 2.000,00",
+                precoCard: "12x R$ 188,33",
+                selo: "5G NFC",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
             },
             {
-                categoria: "POCO",
-                nome: "Poco X6 Pro 5G 512GB",
-                specs: ["512GB Armazenamento", "12GB RAM", "Processador Dimensity 8300-Ultra", "5G"],
-                precoPix: "R$ 2.490,00",
-                precoCard: "12x R$ 234,46",
-                selo: "Power",
-                img: "https://via.placeholder.com/300?text=Poco+X6+Pro"
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 17",
+                specs: "256GB / 6GB RAM",
+                precoPix: "R$ 1.550,00",
+                precoCard: "12x R$ 145,96",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 17 Pro Max 5G",
+                specs: "512GB / 8GB (Bat. 10,000mAh)",
+                precoPix: "R$ 3.020,00",
+                precoCard: "12x R$ 284,38",
+                selo: "Super Bateria",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 14 Pro+ 5G",
+                specs: "512GB / 12GB RAM",
+                precoPix: "R$ 2.300,00",
+                precoCard: "12x R$ 216,58",
+                selo: "Topo de Linha",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.430,00",
+                precoCard: "12x R$ 134,66",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1533228876829-65c94e79502a?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15 Pro",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.740,00",
+                precoCard: "12x R$ 163,85",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15 Pro 5G",
+                specs: "512GB / 12GB RAM",
+                precoPix: "R$ 2.400,00",
+                precoCard: "12x R$ 226,00",
+                selo: "5G",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 15 Pro+",
+                specs: "512GB / 12GB RAM",
+                precoPix: "R$ 2.700,00",
+                precoCard: "12x R$ 254,25",
+                selo: "Pro+",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Note 17",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.580,00",
+                precoCard: "12x R$ 148,78",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Xiaomi / Redmi",
+                nome: "Redmi Pad 2",
+                specs: "128GB / 4GB RAM (Tablet)",
+                precoPix: "R$ 1.300,00",
+                precoCard: "12x R$ 122,42",
+                selo: "Tablet",
+                img: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80"
             },
 
-            // --- TECNO ---
+            // POCO / XIAOMI
             {
-                categoria: "Tecno",
-                nome: "Tecno Spark Go 2024 64GB",
-                specs: ["64GB Armazenamento", "3GB RAM", "Som Estéreo Dual Speakers"],
-                precoPix: "R$ 650,00",
-                precoCard: "12x R$ 61,20",
-                selo: "Econômico",
-                img: "https://via.placeholder.com/300?text=Tecno+Spark+Go"
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C71",
+                specs: "64GB / 3GB RAM",
+                precoPix: "R$ 790,00",
+                precoCard: "12x R$ 74,39",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
             },
             {
-                categoria: "Tecno",
-                nome: "Tecno Spark 20 Pro 256GB",
-                specs: ["256GB Armazenamento", "8GB RAM", "Câmera 108MP", "Carregamento 33W"],
-                precoPix: "R$ 1.120,00",
-                precoCard: "12x R$ 105,46",
-                selo: "Destaque",
-                img: "https://via.placeholder.com/300?text=Tecno+Spark+20"
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C71",
+                specs: "64GB / 4GB RAM",
+                precoPix: "R$ 780,00",
+                precoCard: "12x R$ 73,45",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C71",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 870,00",
+                precoCard: "12x R$ 81,92",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C81 Pro",
+                specs: "64GB / 3GB RAM",
+                precoPix: "R$ 810,00",
+                precoCard: "12x R$ 76,27",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C81 Pro",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 910,00",
+                precoCard: "12x R$ 85,69",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C85 NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.150,00",
+                precoCard: "12x R$ 108,29",
+                selo: "Mais Vendido",
+                img: "https://images.unsplash.com/photo-1575695342320-d2d2d2f9b73f?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco C85 NFC",
+                specs: "128GB / 6GB RAM",
+                precoPix: "R$ 1.000,00",
+                precoCard: "12x R$ 94,17",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1575695342320-d2d2d2f9b73f?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco M7 NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.240,00",
+                precoCard: "12x R$ 116,77",
+                selo: "NFC",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco M8 5G NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.550,00",
+                precoCard: "12x R$ 145,96",
+                selo: "5G",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X7 Pro 5G",
+                specs: "512GB / 12GB RAM",
+                precoPix: "R$ 2.270,00",
+                precoCard: "12x R$ 213,76",
+                selo: "Gamer",
+                img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X8 5G NFC",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 1.900,00",
+                precoCard: "12x R$ 178,92",
+                selo: "Lançamento",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X8 Pro 5G",
+                specs: "512GB / 8GB RAM",
+                precoPix: "R$ 2.570,00",
+                precoCard: "12x R$ 242,01",
+                selo: "Pro",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X8 Pro 5G",
+                specs: "256GB / 8GB RAM",
+                precoPix: "R$ 2.450,00",
+                precoCard: "12x R$ 230,71",
+                selo: "",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X8 Pro 5G",
+                specs: "512GB / 12GB RAM",
+                precoPix: "R$ 2.800,00",
+                precoCard: "12x R$ 263,67",
+                selo: "Top",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Poco / Xiaomi",
+                nome: "Poco X8 Pro Max 5G",
+                specs: "256GB / 12GB RAM",
+                precoPix: "R$ 3.000,00",
+                precoCard: "12x R$ 282,50",
+                selo: "Max",
+                img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80"
+            },
+
+            // TECNO E OUTRAS MARCAS
+            {
+                categoria: "Outras Marcas (Tecno)",
+                nome: "Tecno Spark Go 3",
+                specs: "128GB / 4GB RAM",
+                precoPix: "R$ 920,00",
+                precoCard: "12x R$ 86,63",
+                selo: "Garantia Fabricante",
+                img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                categoria: "Outras Marcas (Tecno)",
+                nome: "Tecno Spark 50 NFC",
+                specs: "256GB / 4GB RAM",
+                precoPix: "R$ 1.280,00",
+                precoCard: "12x R$ 120,53",
+                selo: "NFC",
+                img: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80"
             }
         ];
 
         const container = document.getElementById('catalogo-container');
+
+        // Agrupar por categoria
         const categorias = [...new Set(produtos.map(p => p.categoria))];
 
         categorias.forEach(cat => {
@@ -364,7 +752,7 @@
             grid.className = 'grid';
 
             produtos.filter(p => p.categoria === cat).forEach(prod => {
-                const msg = encodeURIComponent(`Olá! Gostaria de comprar o ${prod.nome} anunciado no catálogo por ${prod.precoPix} no Pix.`);
+                const whatsappMsg = encodeURIComponent(`Olá! Gostaria de mais informações sobre o ${prod.nome} (${prod.specs}) anunciado no catálogo por ${prod.precoPix} à vista.`);
                 
                 const card = document.createElement('div');
                 card.className = 'card';
@@ -373,14 +761,13 @@
                         ${prod.selo ? `<span class="badge">${prod.selo}</span>` : ''}
                     </div>
                     <div class="card-img-box">
-                        <img src="${encodeURIComponent(prod.img)}" alt="${prod.nome}" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Sem+Foto'">
+                        <img src="${prod.img}" alt="${prod.nome}" loading="lazy">
                     </div>
                     <div class="card-content">
                         <span class="brand-label">${prod.categoria}</span>
                         <h3 class="product-name">${prod.nome}</h3>
-                        <ul class="specs-list">
-                            ${prod.specs.map(s => `<li><i class="fa-solid fa-check"></i> ${s}</li>`).join('')}
-                        </ul>
+                        <p class="product-specs">${prod.specs}</p>
+                        <div class="divider"></div>
                         <div class="price-section">
                             <div>
                                 <span class="price-pix-label">No Pix</span>
@@ -392,8 +779,11 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://wa.me/${waNumber}?text=${msg}" target="_blank" class="whatsapp-btn-full">
-                            <i class="fa-brands fa-whatsapp"></i> Comprar pelo WhatsApp
+                        <a href="https://wa.me/5584999999999?text=${whatsappMsg}" target="_blank" class="details-link">
+                            Detalhes <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+                        </a>
+                        <a href="https://wa.me/5584999999999?text=${whatsappMsg}" target="_blank" class="whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 `;
